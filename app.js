@@ -11,7 +11,8 @@ const cors = require('cors');
 //! import mongoose
 const mongoose = require("mongoose");
 // mongoose.connect("mongodb+srv://randi:rama0809@cluster0.hjb1s.mongodb.net/db_staycation?retryWrites=true&w=majority", {
-mongoose.connect("mongodb://localhost:27017/db_ridho", {
+mongoose.connect("mongodb+srv://dbserver:bwamern@cluster0.a4qb2.mongodb.net/db_ridho?retryWrites=true&w=majority", {
+// mongoose.connect("mongodb://localhost:27017/db_ridho", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -35,7 +36,7 @@ app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-  cookie: { maxAge: 60000 }
+  // cookie: { maxAge: 60000 }
 }));
 app.use(flash());
 app.use(logger("dev"));

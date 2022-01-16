@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema;
 
 const itemSchema = new mongoose.Schema({
+  maps: {
+    type: String,
+    required: true,
+  },
   title: {
     type: String,
     required: true,
